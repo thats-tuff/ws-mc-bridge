@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mc-ws-bridge
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MC_HOST
+        value: YOUR_MINEFORT_IP
+      - key: MC_PORT
+        value: "25565"
